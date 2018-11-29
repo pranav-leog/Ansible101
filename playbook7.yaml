@@ -1,0 +1,7 @@
+---
+- hosts: WEB
+  sudo: yes
+
+  tasks:
+  - name: Ensure that server is rebooted
+    reboot: 

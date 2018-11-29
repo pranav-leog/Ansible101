@@ -1,0 +1,15 @@
+---
+- name: This sets up an httpd webserver
+  hosts: localhost
+  tasks:
+  - name: example copying file with owner and permissions
+    copy:
+      src: /opt/test.sh
+      dest: /tmp/test.sh
+      mode: 777
+    notify:
+    - print hostname
+
+  handlers:
+  - name: print hostname
+    include_tasks: /ansible/playbook24.yaml

@@ -1,0 +1,7 @@
+- hosts: WEB
+vars:
+  hello: [Asia, Americas, Artic, Antartic ,Oceania,Europe,Africa]
+  tasks:
+  - name: Ansible List variable Example
+    debug:
+      msg: "{{ hello[2] }}"

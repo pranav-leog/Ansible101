@@ -1,0 +1,16 @@
+- hosts: localhost
+
+  vars_prompt:
+    - name: companyname
+      prompt:  What is your Companies name?
+
+  tasks:
+    - name: Ensure that Apache is installed
+      yum: name=httpd state=present
+      when: ansible_os_family == "RedHat"
+
+    - name: Start Apache Services
+      service: name=httpd enabled=yes state=started
+
+    - name: Copy Site Files
+      template: src=template-example/templates/index.j2 dest=/var/www/html/index.html

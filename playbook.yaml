@@ -1,0 +1,13 @@
+---
+- hosts: WEB
+  sudo: yes
+
+  tasks:
+  - name: Ensure that Apache is installed
+    yum: name=httpd state=present
+  - name: Start Apache Services
+    service: name=httpd enabled=yes state=started
+  - firewalld:
+     port: 80/tcp
+     permanent: true
+     state: enabled

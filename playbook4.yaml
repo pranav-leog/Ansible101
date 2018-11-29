@@ -1,0 +1,9 @@
+---
+- hosts: WEB
+  sudo: yes
+
+  tasks:
+  - lineinfile:
+      path: /opt/index.html
+      create: yes
+      line: AddText

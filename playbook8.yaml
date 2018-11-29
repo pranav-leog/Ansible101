@@ -1,0 +1,6 @@
+---
+- hosts: WEB
+  sudo: yes
+  
+  tasks:
+  - debug: msg="System {{ nameVar }} "

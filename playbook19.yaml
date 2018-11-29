@@ -1,0 +1,8 @@
+---
+- hosts: web
+  sudo: yes
+
+  tasks:
+  - name: Ensure that Apache is installed
+    command: ls -lrth
+    when: ansible_os_family == "RedHat"

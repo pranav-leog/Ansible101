@@ -1,0 +1,9 @@
+---
+- hosts: WEB
+  sudo: yes
+
+  tasks:
+  - name: Ensure that git is installed
+    yum: name=git state=present
+  - name: Ensure that git is installed
+    yum: name=wget state=present

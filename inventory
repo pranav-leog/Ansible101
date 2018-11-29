@@ -1,0 +1,15 @@
+[web]
+192.168.0.77 ansible_user=root ansible_ssh_private_key_file=/root/.ssh/id_rsa_bkp ansible_shell_type=sh
+
+[win]
+192.168.0.87
+
+[web:vars]
+packagename=httpd
+
+[win:vars]
+ansible_user=Administrator
+ansible_password=P@ssw0rd
+ansible_connection=winrm
+ansible_winrm_transport=basic
+ansible_winrm_server_cert_validation=ignore

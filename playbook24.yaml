@@ -1,0 +1,6 @@
+  - name: Ansible register variable basic example
+    shell: /tmp/test.sh
+    register: find_output
+  - debug:
+     var: find_output
+

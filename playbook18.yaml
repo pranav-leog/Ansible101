@@ -1,0 +1,13 @@
+---
+- hosts: all
+  sudo: yes
+  vars:
+    packname: httpd
+  vars_files:
+    - /ansible/vars/external_vars.yml
+
+  tasks:
+  - name: Ensure that Apache is installed
+    yum: name={{packnamevarfile}} state=present
+
+
