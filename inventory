@@ -1,6 +1,10 @@
 [web]
 192.168.0.77 ansible_user=root ansible_ssh_private_key_file=/root/.ssh/id_rsa_bkp ansible_shell_type=sh
 
+[app]
+192.168.0.77 ansible_user=root ansible_ssh_private_key_file=/root/.ssh/id_rsa_bkp ansible_shell_type=sh
+
+
 [win]
 192.168.0.87
 

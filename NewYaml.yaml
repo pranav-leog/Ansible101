@@ -1,6 +1,0 @@
----
-- hosts: WEB
-  sudo: yes
-
-  tasks:
-  - name: Add user to a group
