@@ -1,0 +1,2 @@
+  - name: Install WebServer
+    yum: name=httpd state=present

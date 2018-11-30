@@ -1,0 +1,7 @@
+---
+- hosts: WEB
+  sudo: yes
+
+  tasks:
+  - name: Ensure that Apache is installed
+    yum: name=httpd state=present

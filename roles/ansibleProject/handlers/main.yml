@@ -1,0 +1,4 @@
+---
+# handlers file for ansibleProject
+- name: restart_httpd
+  service: name="httpd" state=restarted

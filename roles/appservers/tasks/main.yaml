@@ -1,0 +1,5 @@
+  - name: example copying file with owner and permissions
+    copy:
+      src: /opt/test.sh
+      dest: /tmp/test.sh
+      mode: 777

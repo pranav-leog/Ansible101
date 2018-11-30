@@ -1,0 +1,9 @@
+---
+- hosts: web
+
+  vars_prompt:
+    - name: companyname
+      prompt:  What is your Companies name?
+
+  roles:
+    - ansibleProject

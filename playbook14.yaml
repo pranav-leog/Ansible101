@@ -1,0 +1,7 @@
+---
+- hosts: web
+  sudo: yes
+
+  tasks:
+  - name: Ensure that Apache is installed
+    yum: name={{packagename}} state=present

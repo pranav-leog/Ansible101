@@ -1,0 +1,7 @@
+---
+- hosts: WEB
+  sudo: yes
+
+  tasks:
+  - name: Add user to a group
+    user: name=deploy-user group=group append=yes shell=/bin/bash

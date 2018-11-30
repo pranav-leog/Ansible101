@@ -1,0 +1,10 @@
+---
+- hosts: all
+  sudo: yes
+  vars:
+    packname: httpd
+
+  tasks:
+  - name: Ensure that Apache is installed
+    yum: name={{packname}} state=present
+

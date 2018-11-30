@@ -1,0 +1,7 @@
+---
+- hosts: WEB
+  sudo: yes
+
+  tasks:
+  - name: Ensure that git is cloned
+    git: dest=/opt/bmcdir repo=https://github.com/scmgalaxy/ansible-role-template clone=yes
